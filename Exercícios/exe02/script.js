@@ -6,14 +6,15 @@ function verificar(){
     if (fano.value.length == 0 || fano.value > ano){
         window.alert('[ERRO] - Verifique os dados e tente novamente!')
     } else {
-        var fsex = window.document.getElementsByName('sexo')
-        var idade = ano - Number(fano.value)
+        var nas = Number(fano.value)   
+        var idade = ano - nas
         var genero = ''
-        if (fsex[0].cheked){
+        var gen = window.document.getElementsByName('sexo')
+        if(gen[1].checked){
             genero = 'homem'
-        } else if (fsex[1].cheked){
+        }else if(gen[2].checked){
             genero = 'mulher'
         }
-        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        res.innerHTML = `Tem ${idade} anos!`
     }
 }
