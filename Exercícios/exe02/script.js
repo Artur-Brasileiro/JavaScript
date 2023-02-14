@@ -10,11 +10,11 @@ function verificar(){
         var idade = ano - nas
         var genero = ''
         var gen = window.document.getElementsByName('sexo')
-        if(gen[1].checked){
+        if(gen[0].checked){
             genero = 'homem'
-        }else if(gen[2].checked){
+        }else if(gen[1].checked){
             genero = 'mulher'
         }
-        res.innerHTML = `Tem ${idade} anos!`
+        res.innerHTML = `Tem ${idade} anos! É ${genero}`
     }
 }
